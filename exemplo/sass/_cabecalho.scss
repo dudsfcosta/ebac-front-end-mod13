@@ -1,10 +1,12 @@
 @use '_variaveis';
+@use 'mixin';
 
 .cabecalho {
 
   background: variaveis.$cor-primaria;
   color: white;
-  padding: variaveis.$espacamento-padrao;
+  @include mixin.espacamento-padrao;
+  // padding: variaveis.$espacamento-padrao;
 
   &__titulo {
 
