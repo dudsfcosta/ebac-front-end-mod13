@@ -1,0 +1,23 @@
+// Arquivo principal
+
+@use 'variaveis';
+@use 'mixins';
+@use 'base';
+@use 'layout';
+@use 'componentes';
+
+// Responsividade
+@media (max-width: variaveis.$breakpoint-md) {
+  .header {
+    flex-direction: column;
+    gap: variaveis.$spacing-sm;
+  }
+
+  .nav__menu {
+    flex-direction: column;
+  }
+
+  .contact__container {
+    flex-direction: column;
+  }
+}

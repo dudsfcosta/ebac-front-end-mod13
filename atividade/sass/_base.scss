@@ -1,0 +1,23 @@
+// Reset
+@use 'variaveis';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: variaveis.$font-main;
+  line-height: 1.6;
+  color: variaveis.$color-secondary;
+  background-color: variaveis.$color-white;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: variaveis.$spacing-md;
+  font-size: 2rem;
+}

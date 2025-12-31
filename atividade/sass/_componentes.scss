@@ -1,0 +1,74 @@
+@use "variaveis";
+@use "mixins";
+
+.card {
+  background-color: variaveis.$color-light;
+  padding: variaveis.$spacing-md;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.services {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: variaveis.$spacing-md;
+  }
+}
+
+.testimonials {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: variaveis.$spacing-md;
+    justify-content: center;
+  }
+}
+
+.testimonial {
+  max-width: 300px;
+  background-color: variaveis.$color-light;
+  padding: variaveis.$spacing-md;
+  border-left: 5px solid variaveis.$color-primary;
+
+  &__author {
+    display: block;
+    margin-top: variaveis.$spacing-sm;
+    font-weight: bold;
+  }
+}
+
+.contact {
+  &__container {
+    display: flex;
+    gap: variaveis.$spacing-md;
+    flex-wrap: wrap;
+  }
+
+  &__info {
+    flex: 1;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: variaveis.$spacing-sm;
+
+  &__input,
+  &__textarea {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}
+
+.button {
+  @include mixins.button-base();
+}
+
+.footer {
+  text-align: center;
+  padding: variaveis.$spacing-sm;
+  background-color: variaveis.$color-secondary;
+  color: variaveis.$color-white;
+}

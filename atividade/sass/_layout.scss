@@ -1,0 +1,50 @@
+// Design geral
+@use "variaveis";
+@use "mixins";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: variaveis.$spacing-md 5vw;
+  background-color: variaveis.$color-light;
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+
+.nav {
+  &__menu {
+    display: flex;
+    list-style: none;
+    gap: variaveis.$spacing-md;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: variaveis.$color-secondary;
+  }
+}
+
+.hero {
+  height: 80vh;
+  background: linear-gradient(to right, variaveis.$color-primary, variaveis.$color-primary);
+  color: variaveis.$color-white;
+  text-align: center;
+
+  @include mixins.flex-center();
+
+  &__content {
+    max-width: 600px;
+    padding: variaveis.$spacing-md;
+  }
+}
+
+.about,
+.services,
+.testimonials,
+.contact {
+  @include mixins.section-padding();
+}

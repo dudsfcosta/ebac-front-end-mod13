@@ -1,0 +1,22 @@
+// Mixins
+@use "variaveis";
+// Centralização flex
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Padding padrão de seção
+@mixin section-padding {
+    padding: variaveis.$spacing-lg 5vw;
+}
+
+// Botão padrão
+@mixin button-base {
+    padding: 0.8rem;
+    background-color: variaveis.$color-primary;
+    color: variaveis.$color-white;
+    border: none;
+    cursor: pointer;
+}
